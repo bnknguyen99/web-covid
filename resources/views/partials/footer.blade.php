@@ -1,26 +1,21 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VNPT Mobile Store</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 
-<body>
-    <footer class="text-white pt-4 mt-4" style="background-color: #1f7ed0; font-size: 15px;">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-sm-6 col-md-12 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="mb-4">VNPT MOBILE STORE</h6>
+    <footer class="footer-fr" style="background-color: #1f7ed0; font-size: 15px;">
+                <div class="grid1">
+                    <h3>VNPT MOBILE STORE</h3>
                     <p>
                         VNPT Mobile Store nhận đặt hàng trực tuyến và giao hàng tận nơi với đầy đủ các dòng điện thoại
                         đến từ các hãng lớn nhất hiện nay phục vụ cho nhu cầu mua sắm của quý khách hàng.
                     </p>
+
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
-                    <h6 class="mb-4">DỊCH VỤ & HỖ TRỢ</h6>
+                <div class="grid2">
+                    <h3>DỊCH VỤ & HỖ TRỢ</h3>
                     <p>
                         <a href="#" class="links">Chính sách bảo hành</a>
                     </p>
@@ -38,8 +33,8 @@
                     </p>
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
-                    <h6 class="mb-4">TÀI KHOẢN CỦA TÔI</h6>
+                <div class="grid3">
+                    <h3>TÀI KHOẢN CỦA TÔI</h3>
                     <p>
                         <a href="#" class="links">Đăng nhập</a>
                     </p>
@@ -54,50 +49,47 @@
                     </p>
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="mb-4">LIÊN HỆ</h6>
+                <div class="grid4">
+                    <h3>LIÊN HỆ</h3>
                     <p>
-                        <i class="fas fa-home me-3"></i>3/2, Ninh Kiều, Cần Thơ, Việt Nam
+                        <i class="fas fa-home me-3" style="padding-right: 15px"></i> 3/2, Ninh Kiều, Cần Thơ, Việt Nam
                     </p>
                     <p>
-                        <i class="fas fa-envelope me-3"></i>vnptmobile@gmail.com
+                        <i class="fas fa-envelope me-3" style="padding-right: 15px"></i> vnptmobile@gmail.com
                     </p>
                     <p>
-                        <i class="fas fa-phone me-3"></i>19004399
+                        <i class="fas fa-phone me-3" style="padding-right: 15px"></i> 19004399
                     </p>
                     <p>
-                        <i class="fas fa-clock me-3"></i>9h00 - 21h00
+                        <i class="fas fa-clock me-3" style="padding-right: 15px"></i> 9h00 - 21h00
                     </p>
                 </div>
-            </div>
 
-            <hr class="line mb-4">
+                <hr class="grid-hr">
 
-            <div class="row align-items-center">
-                <div class="col-md-12 col-lg-12 col-xl-7">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item h6">Theo dõi chúng tôi</li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon fab fa-facebook"></a>
+
+            <div class="grid5">
+
+                    <ul >
+                        <li style="padding-right: 15px">Theo dõi chúng tôi</li>
+                        <li >
+                            <a href="#" class="social-icon fab fa-facebook" style="padding-right: 15px"></a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon fab fa-google-plus"></a>
+                        <li >
+                            <a href="#" class="social-icon fab fa-google-plus"style="padding-right: 15px"></a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon fab fa-instagram"></a>
+                        <li>
+                            <a href="#" class="social-icon fab fa-instagram"style="padding-right: 15px"></a>
                         </li>
                     </ul>
-                </div>
+            </div>
 
-                <div class="col-md-12 col-lg-12 col-xl-5">
+                <div class="grid6">
                     <p>Copyright &copy;2021
                         <strong>VNPT MOBILE STORE</strong> All rights reserved
                     </p>
                 </div>
-            </div>
+            
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
+    </html>
