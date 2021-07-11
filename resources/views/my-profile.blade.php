@@ -36,13 +36,13 @@
         <div class="sidebar">
 
             <ul>
-              <li class="active"><a href="{{ route('users.edit') }}">My Profile</a></li>
-              <li><a href="{{ route('orders.index') }}">My Orders</a></li>
+              <li class="active"><a href="{{ route('users.edit') }}">Thông tin của tôi</a></li>
+              <li><a href="{{ route('orders.index') }}">Đơn hàng</a></li>
             </ul>
         </div> <!-- end sidebar -->
         <div class="my-profile">
             <div class="products-header">
-                <h1 class="stylish-heading">My Profile</h1>
+                <h1 class="stylish-heading">Thông tin</h1>
             </div>
 
             <div>
@@ -50,17 +50,23 @@
                     @method('patch')
                     @csrf
                     <div class="form-control">
-                        <input id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Name" required>
+                        <input id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Tên" required>
+                    </div>
+                    <div class="form-control">
+                        <input id="address" type="text" name="address" value="{{ old('address', $user->address) }}" placeholder="Địa chỉ">
                     </div>
                     <div class="form-control">
                         <input id="email" type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="Email" required>
                     </div>
                     <div class="form-control">
-                        <input id="password" type="password" name="password" placeholder="Password">
-                        <div>Leave password blank to keep current password</div>
+                        <input id="created_at" type="created_at" name="created_at" value="{{ old('role', $user->created_at) }}" placeholder="Ngày tạo" required disabled>
                     </div>
                     <div class="form-control">
-                        <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password">
+                        <input id="password" type="password" name="password" placeholder="Mật khẩu">
+                        <div><p style="text-align: right; padding-right: 300px; font-size:12px">Để trống nếu không muốn cập nhật mật khẩu</p></div>
+                    </div>
+                    <div class="form-control">
+                        <input id="password-confirm" type="password" name="password_confirmation" placeholder="Xác nhận mật khẩu">
                     </div>
                     <div>
                         <button type="submit" class="my-profile-button">Update Profile</button>

@@ -9,7 +9,7 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/"><span style="color:#ffffff">Trang chủ</span></a>
+        <a href="/"><span style="color:#000000">Trang chủ</span></a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Giỏ hàng</span>
     @endcomponent
@@ -57,7 +57,7 @@
                             <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="cart-options">Save for Later</button>
+                                <button type="submit" class="cart-options">Yêu thích</button>
                             </form>
                         </div>
                         <div>
@@ -128,9 +128,9 @@
 
             @else
 
-                <h3>No items in Cart!</h3>
+                <h3>Chưa có sản phẩm trong giỏ hàng</h3>
                 <div class="spacer"></div>
-                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
+                <a href="{{ route('shop.index') }}" class="button">Mua hàng ngay</a>
                 <div class="spacer"></div>
 
             @endif
@@ -174,7 +174,7 @@
 
             @else
 
-            <h3>You have no items Saved for Later.</h3>
+            <h3>Chưa có sản phẩm yêu thích</h3>
 
             @endif
 

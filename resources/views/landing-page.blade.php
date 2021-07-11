@@ -63,24 +63,19 @@
 
 
                     <div class="text-center button-container">
-                        <a href="#" class="button">Featured</a>
-                        <a href="/shop?category=on-sale" class="button">On Sale</a>
+                        <a href="{{ route('shop.index') }}" class="button">Xem thêm</a>
+                        <a href="/shop?category=on-sale" class="button">Đang giảm giá</a>
                     </div>
                         
                     {{-- <div class="tabs">
                         <div class="tab">
-                            Featured
+                            view more
                         </div>
                         <div class="tab">
                             On Sale
                         </div>
                     </div> --}}
 
-
-
-                    <div class="text-center button-container">
-                        <a href="{{ route('shop.index') }}" class="button">View more products</a>
-                    </div>
 
                 </div> <!-- end container -->
 
