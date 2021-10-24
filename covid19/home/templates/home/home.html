@@ -1,0 +1,301 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}">
+{% endblock %}
+
+{% block content %}
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_slider_container">
+			<!-- Home Slider -->
+			<div class="owl-carousel owl-theme home_slider">
+				<!-- Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({% static 'images/home_background1.jpg' %})"></div>
+					<div class="home_content">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content_inner">
+										<div class="home_title"><h1>THÔNG TIN VỀ COVID-19</h1></div>
+										<div class="home_text">
+											<p>Số liệu thống kê, tin tức, hỏi đáp,...</p>
+										</div>
+										<div class="button home_button">
+											<a href="/about">Xem thêm</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slider Progress -->
+			<div class="home_slider_progress"></div>
+		</div>
+	</div>
+
+	<!-- 3 Boxes -->
+
+	<div class="boxes">
+		<div class="container">
+			<div class="row">
+				
+				<!-- Box -->
+				<div class="col-lg-4 box_col">
+					<div class="box box_appointments" >
+						<p class="box_title">Số ca nhiễm</p>
+						<canvas id="chart1" style="width:100%;height: 80%;"></canvas>
+					</div>
+				</div>
+
+				<!-- Box -->
+				<div class="col-lg-4 box_col">
+					<div class="box box_appointments">
+						<p class="box_title">Số ca phục hồi</p>
+						<canvas id="chart2" style="width:100%;height: 80%;"></canvas>
+					</div>
+				</div>
+
+				<!-- Box -->
+				<div class="col-lg-4 box_col">
+					<div class="box box_appointments">
+						<p class="box_title">Số ca tử vong	</p>
+						<canvas id="chart3" style="width:100%;height: 80%;"></canvas>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+
+	<div class="about">
+		<div class="container">
+			<div class="row row-lg-eq-height">
+				
+				<!-- About Content -->
+				<div class="col-lg-7">
+					<div class="about_content">
+						<div class="section_title"><h2>Tổng hợp diễn biến dịch</h2></div>
+						<div class="about_text">
+							<p>- Tính đến sáng 3/8 Việt Nam có 165.339 ca nhiễm trong đó có 2.287 ca nhập cảnh và 163.052 ca mắc trong nước.</p>
+							<p>- Số ca nhiễm mới ghi nhận trong nước tính của đợt dịch kể từ 27/4 đến nay là 161.482 ca, trong đó có 44.191 bệnh nhân đã được công bố khỏi bệnh.</p>
+							<p>- Có 04/62 tỉnh, thành phố đã qua 14 ngày không ghi nhận trường hợp nhiễm mới: Yên Bái, Quảng Ninh, Bắc Kạn, Thái Bình.</p>
+							<p>- Có 10 tỉnh, thành phố không có lây nhiễm thứ phát trên địa bàn: Lào Cai, Ninh Bình, Kon Tum, Hà Giang, Sơn La, Lai Châu, Tuyên Quang, Quảng Trị, Nam Định, Điện Biên.</p>
+							
+						</div>
+						<div class="button about_button">
+							<a href="#">read more</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- About Image -->
+				<div class="col-lg-5">
+					<div class="about_image"><img src="{% static 'images/about.png'%}" alt=""></div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Departments -->
+
+	<div class="departments">
+		<div class="departments_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/departments.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title section_title_light"><h2>Thống kê theo tỉnh/thành phố</h2></div>
+				</div>
+			</div>
+			<div class="row departments_row row-md-eq-height"></div>
+				<div class="container" style="height: 400px;">
+					<div class="table-responsive">
+				 
+					 <div id="employee_table" >
+					 </div>
+					</div>
+					
+				   </div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Services -->
+
+	<div class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title"><h2>Our Featured Services</h2></div>
+				</div>
+			</div>
+			<div class="row services_row">
+				
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="services">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{% static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Free Checkups</div>
+							<div class="service_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="services">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{% static 'images/service_2.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Screening Exams</div>
+							<div class="service_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="services">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{% static 'images/service_3.svg'%}" alt=""></div>
+							<div class="service_title trans_200">RMI Services</div>
+							<div class="service_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="cta">
+		<div class="cta_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/cta.jpg'%}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content text-center">
+						<h2>Cần tư vấn tại chỗ?</h2>
+						<h3 style="color: aliceblue;"> Sử dụng ngay Chatbot tư vấn về Covid-19 </h3>
+						<div class="button cta_button"><a href="#">Bắt đầu chat</a></div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+	</script>
+	<script>
+		var xValues = [10,15,20,25,30,35,40,45,50];
+		new Chart("chart1", {
+		type: "line",
+		
+		data: {
+			labels: xValues,
+			datasets: [{
+			data: [18,25,36,27,42,30,24,37,48],
+			borderColor: "aliceblue",
+			fill: true
+			},]
+		},
+		options: {
+			legend: {display: false},
+			scales: {
+              xAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				 } ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}],
+              yAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				} ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}]
+              },
+			  
+			                            },
+
+		});
+	</script>
+	<script>
+		var xValues = [10,15,20,25,30,35,40,45,50];
+		new Chart("chart2", {
+		type: "line",
+		
+		data: {
+			labels: xValues,
+			datasets: [{
+			data: [18,25,36,27,42,30,24,37,48],
+			borderColor: "aliceblue",
+			fill: true
+			},]
+		},
+		options: {
+			legend: {display: false},
+			scales: {
+              xAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				 } ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}],
+              yAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				} ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}]
+              },
+			  
+			                            },
+
+		});
+	</script>
+	<script>
+		var xValues = [10,15,20,25,30,35,40,45,50];
+		new Chart("chart3", {
+		type: "line",
+		
+		data: {
+			labels: xValues,
+			datasets: [{
+			data: [18,25,36,27,42,30,24,37,48],
+			borderColor: "aliceblue",
+			fill: true
+			},]
+		},
+		options: {
+			legend: {display: false},
+			scales: {
+              xAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				 } ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}],
+              yAxes: [{gridLines: {  drawOnChartArea: false, color:"grey"
+				  				} ,
+			  					ticks: {
+									fontColor: "aliceblue",
+									fontSize: 12	}}]
+              },
+			  
+			                            },
+
+		});
+	</script>
+{% endblock %}

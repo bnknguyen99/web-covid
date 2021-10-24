@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/news.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/news_responsive.css'%}">
+{% endblock %}
+{% block content %}
+
+{% load static %}
+
+
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/news.jpg'%}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title"><span>CareMed</span> News</div>
+							<div class="breadcrumbs">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li>News</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			<div class="row">
+				
+				<!-- News Posts -->
+				<div class="col-lg-">
+					<div class="news_posts">
+						
+						<h2 style="color: rgb(7, 145, 209);">{{post.title}}</h2>
+                        <br>
+						<h6>Ngày đăng: {{post.date|date:"d/m/Y h:i a"}}</h6>
+                        <br>
+						{{post.body|safe|linebreaks}}
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	{% endblock %}
